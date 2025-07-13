@@ -185,3 +185,7 @@ sudo systemctl restart 0gchaind
 ```
 sudo journalctl -u 0gchaind -u 0ggeth -f --no-hostname -o cat
 ```
+---
+### Create Validator 
+[Tutorial regist Validator](https://github.com/OneNov0209/Regist-0g/blob/main/create-validator.md)
+---
