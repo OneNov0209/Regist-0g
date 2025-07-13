@@ -131,7 +131,11 @@ EOF
 # enable and start 0ggeth
 ```
 sudo systemctl daemon-reload
+```
+```
 sudo systemctl enable 0ggeth
+```
+```
 sudo systemctl restart 0ggeth
 ```
 # Create 0gchaind systemd file 
