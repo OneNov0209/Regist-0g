@@ -1,47 +1,9 @@
-# Regist-0g Validator
 🧾 Register as Validator on 0G Network
 
 This guide walks you through the complete process of registering as a validator in the 0G Network, from setting up the environment to submitting the validator registration transaction using Remix IDE.
 
 
----
-
-✅ Requirements
-
-Ubuntu 22.04 VPS or server
-
-At least 0.2 OG tokens
-
-EVM wallet (e.g., MetaMask)
-
-Installed: 0gchaind, foundry
-
-Access to Remix IDE
-
-
-
----
-
-1. 🔧 Setup 0gchaind
-
-git clone https://github.com/0glabs/0gchaind
-cd 0gchaind
-make install
-
-Initialize your node:
-```
-
-0gchaind init <moniker> --chain-id 0gchain-16601 --home $HOME/.0gchaind/0g-home/0gchaind-home
-```
-Download genesis:
-```
-wget -O $HOME/.0gchaind/0g-home/0gchaind-home/config/genesis.json \
-https://0gchain-configs.s3.amazonaws.com/genesis.json
-```
-
----
-
-2. 📨 Create Deposit Message
+## 1. 📨 Create Deposit Message
 
 Run:
 ```
@@ -65,7 +27,7 @@ Save pubkey and signature.
 
 ---
 
-3. 🧮 Compute Validator Address
+## 2. 🧮 Compute Validator Address
 
 Install Foundry:
 ```
@@ -89,7 +51,7 @@ cast call 0xea224dBB52F57752044c0C86aD50930091F561B9 \
 
 ---
 
-4. 🛠 Deploy Contract in Remix
+## 3. 🛠 Deploy Contract in Remix
 
 📄 File: StakingInterface.sol
 ```
@@ -162,7 +124,7 @@ Signature: 0x... (from step 2)
 
 ---
 
-5. ✅ Verify Transaction
+## 4. ✅ Verify Transaction
 ```
 curl -s -X POST https://evmrpc-testnet.0g.ai \
 -H "Content-Type: application/json" \
