@@ -9,7 +9,7 @@ Run:
 ```
 0gchaind deposit create-validator \
 <validator_address> \
-200000000 \
+32000000000 \
 $HOME/.0gchaind/0g-home/0gchaind-home/config/genesis.json \
 --home $HOME/.0gchaind/0g-home/0gchaind-home \
 --chaincfg.chain-spec=devnet
